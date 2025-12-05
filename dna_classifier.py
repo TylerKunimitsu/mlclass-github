@@ -15,7 +15,8 @@ import plotly.express as px
 
 
 print("Hello, World!!!!")
-data=pd.read_csv("classification_and_seqs_aln.csv") # read the data file
+#data=pd.read_csv("classification_and_seqs_aln.csv") # read the data file
+data=pd.read_csv("gs://big-dna/all_classifcation_and_seqs_aln.csv")
 print(data.head())
 
 # A and T related closely. C and G related closely. Encode so that the numbers are close together
