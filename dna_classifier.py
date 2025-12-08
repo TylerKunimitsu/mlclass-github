@@ -33,7 +33,7 @@ print("Hello", seq[0][0])
 #encoder=encoder.fit(list(seq[0])) # Fit the encoder to recognize the characters given in each sequence
 encoder=encoder.fit(["-", "A", "T", "C", "G"]) # fits the encoder (makes a "key" for the characters in the DNA sequence)
 
-for i in range(480): # Repeat for each DNA sequence 
+for i in range(len(data)): # Repeat for each DNA sequence 
     temp=[]
     encoded=encoder.transform(list(seq[i])) # Encode the current sequence
     for n in range(len(seq[i])):
