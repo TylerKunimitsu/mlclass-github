@@ -16,7 +16,7 @@ import plotly.express as px
 
 print("Hello, World!!!!")
 #data=pd.read_csv("classification_and_seqs_aln.csv") # read the data file
-data=pd.read_csv("gs://big-dna/all_classifcation_and_seqs_aln.csv")
+data=pd.read_csv("all_classifcation_and_seqs_aln.csv")
 print(data.head())
 
 # A and T related closely. C and G related closely. Encode so that the numbers are close together
@@ -56,7 +56,7 @@ model = tf.keras.models.Sequential([ # Define the model
     tf.keras.layers.Dense(44, activation="relu"),
     #tf.keras.layers.Dense(18, activation="relu"),
     #tf.keras.layers.Dense(12, activation="relu"),
-    tf.keras.layers.Dense(39, activation="relu"), # 34 nodes for 34 different species (34 different output nodes)
+    tf.keras.layers.Dense(46, activation="relu"), # 34 nodes for 34 different species (34 different output nodes)
     tf.keras.layers.Softmax() # Set later for species of DNA
 ])
 
